@@ -3,7 +3,7 @@
  */
 
  const startButton = document.querySelector(".js-start-button");
- // TODO: Add the missing query selectors:
+ // Added the missing query selectors:
  const statusSpan = document.querySelector(".status"); // Used querySelector() to get the status element
  const heading = document.querySelector(".js-heading"); // Used querySelector() to get the heading element
  const padContainer = document.querySelector(".pad-container"); // Used querySelector() to get the padContainer elements
@@ -256,6 +256,7 @@ function activatePads(sequence) {
   padContainer.classList.add("unclickable");
   statusSpan.textContent = "The computer's turn...";
   heading.textContent = `Round ${roundCount} of ${maxRoundCount}`;
+  computerSequence.push(getRandomItem(pads.map((pad) => pad.color)));
   activatePads(computerSequence);
   setTimeout(() => playHumanTurn(roundCount), roundCount * 600 + 1000); // 5
 }
@@ -295,7 +296,7 @@ function playHumanTurn() {
  *
  */
 function checkPress(color) {
-  playerSequence.add(color);
+  playerSequence.push(color);
   let index = playerSequence.findIndex(color);
   let remainingPresses = computerSequence.length - playerSequence.length;
   statusSpan.textContent = `Player's turn:${remainingPresses} presses left`;
