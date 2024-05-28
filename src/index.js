@@ -36,26 +36,26 @@ let roundCount = 0; // track the number of rounds that have been played so far
     color: "red",
     selector: document.querySelector(".js-pad-red"),
     //sound: new Audio("../assets/simon-says-sound-1.mp3"),
-    sound: new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-1.mp3?raw=true"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-1.mp3?raw=true"),
   },
   // Added the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
   {
     color: "green",
     selector: document.querySelector(".js-pad-green"),
     //sound: new Audio("../assets/simon-says-sound-2.mp3"),
-    sound: new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-2.mp3?raw=true"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-2.mp3?raw=true"),
   },
   {
     color: "blue",
     selector: document.querySelector(".js-pad-blue"),
     //sound: new Audio("../assets/simon-says-sound-3.mp3"),
-    sound: new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-3.mp3?raw=true"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-3.mp3?raw=true"),
   },
   {
     color: "yellow",
     selector: document.querySelector(".js-pad-yellow"),
     //sound: new Audio("../assets/simon-says-sound-4.mp3"),
-    sound: new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-4.mp3?raw=true"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-4.mp3?raw=true"),
   }
 ];
 
