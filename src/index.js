@@ -269,7 +269,7 @@ function activatePads(sequence) {
  */
 function playHumanTurn() {
   padContainer.classList.remove("unclickable");
-  statusSpan.textContent = `${computerSequence.length - playerSequence.length} presses left in the round`;
+  statusSpan.textContent = `Player's turn:${computerSequence.length - playerSequence.length} presses left`;
 }
 
 /**
@@ -298,7 +298,7 @@ function checkPress(color) {
   playerSequence.add(color);
   let index = playerSequence.findIndex(color);
   let remainingPresses = computerSequence.length - playerSequence.length;
-  statusSpan.textContent = `${computerSequence.length - playerSequence.length} presses left in the round`;
+  statusSpan.textContent = `Player's turn:${remainingPresses} presses left`;
   if (computerSequence[index] != playerSequence[index]){
     resetGame();
     return;
