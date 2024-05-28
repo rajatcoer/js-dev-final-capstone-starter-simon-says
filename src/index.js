@@ -117,7 +117,7 @@ function padHandler(event) {
   if (!color) return;
   let pad = pads.find((pad) => pad.color === color);
   let padAudio = pad.sound;
-  padAudio.play();
+  //padAudio.play();
   checkPress(color);
   return color;
 }
@@ -207,7 +207,7 @@ function activatePad(color) {
   let pad = pads.find((pad) => pad.color === color);
   pad.selector.classList.add("activated");
   let padAudio = pad.sound;
-  padAudio.play();
+  //padAudio.play();
   setTimeout(() => {
     pad.selector.classList.remove("activated");
   },500);
