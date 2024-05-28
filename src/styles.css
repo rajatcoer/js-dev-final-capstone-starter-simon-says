@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  color: yellow;
+  color: rgb(212, 0, 255);
   font-family: 'Rubik Microbe', sans-serif;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  background-color: #000;
+  background-color: #2698a9;
   padding: 40px;
 }
 
@@ -37,25 +37,25 @@ h1 {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: yellow;
+  color: rgb(43, 96, 27);
   text-align: center;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid yellow;
+  border: 1px solid rgb(18, 59, 41);
   cursor: pointer;
 }
 
 .start-button:hover {
-  color: greenyellow;
+  color: rgb(200, 234, 33);
   font-size: 18px;
-  border-color: greenyellow;
+  border-color: rgb(82, 95, 63);
   transform: rotate(5deg);
 }
 
 .status {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .pad-container {

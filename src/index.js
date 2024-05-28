@@ -35,7 +35,8 @@ let roundCount = 0; // track the number of rounds that have been played so far
   {
     color: "red",
     selector: document.querySelector(".js-pad-red"),
-    //sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    // sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    // changed to absolute path since relative path was not working.
     sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/blob/main/assets/simon-says-sound-1.mp3?raw=true"),
   },
   // Added the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
@@ -112,7 +113,6 @@ function startButtonHandler() {
  * 6. Return the `color` variable as the output
  */
 function padHandler(event) {
-  event.preventDefault();
   const { color } = event.target.dataset;
   if (!color) return;
   let pad = pads.find((pad) => pad.color === color);
