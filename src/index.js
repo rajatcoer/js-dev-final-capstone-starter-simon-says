@@ -112,7 +112,7 @@ function startButtonHandler() {
  * 6. Return the `color` variable as the output
  */
 function padHandler(event) {
-  event.preventDefault();
+  //event.preventDefault();
   const { color } = event.target.dataset;
   if (!color) return;
   let pad = pads.find((pad) => pad.color === color);
