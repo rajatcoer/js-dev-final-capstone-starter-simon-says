@@ -35,23 +35,27 @@ let roundCount = 0; // track the number of rounds that have been played so far
   {
     color: "red",
     selector: document.querySelector(".js-pad-red"),
-    sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    //sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/tree/main/assets/simon-says-sound-1.mp3"),
   },
   // Added the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
   {
     color: "green",
     selector: document.querySelector(".js-pad-green"),
-    sound: new Audio("../assets/simon-says-sound-2.mp3"),
+    //sound: new Audio("../assets/simon-says-sound-2.mp3"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/tree/main/assets/simon-says-sound-2.mp3"),
   },
   {
     color: "blue",
     selector: document.querySelector(".js-pad-blue"),
-    sound: new Audio("../assets/simon-says-sound-3.mp3"),
+    //sound: new Audio("../assets/simon-says-sound-3.mp3"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/tree/main/assets/simon-says-sound-3.mp3"),
   },
   {
     color: "yellow",
     selector: document.querySelector(".js-pad-yellow"),
-    sound: new Audio("../assets/simon-says-sound-4.mp3"),
+    //sound: new Audio("../assets/simon-says-sound-4.mp3"),
+    sound: new Audio("https://github.com/rajatcoer/js-dev-final-capstone-starter-simon-says/tree/main/assets/simon-says-sound-4.mp3"),
   }
 ];
 
@@ -111,6 +115,8 @@ function padHandler(event) {
   const { color } = event.target.dataset;
   if (!color) return;
   let pad = pads.find((pad) => pad.color === color);
+  console.log(pad);
+  console.log(pad.sound);
   pad.sound.play();
   checkPress(color);
   return color;
@@ -297,7 +303,7 @@ function playHumanTurn() {
  */
 function checkPress(color) {
   playerSequence.push(color);
-  let index = playerSequence.findIndex(color);
+  let index = playerSequence.indexOf(color);
   let remainingPresses = computerSequence.length - playerSequence.length;
   statusSpan.textContent = `Player's turn:${remainingPresses} presses left`;
   if (computerSequence[index] != playerSequence[index]){
