@@ -231,7 +231,7 @@ function activatePads(sequence) {
   sequence.forEach(color => {
     setTimeout(() => {
       activatePad(color);
-    }, delay += 6000);
+    }, delay += 600);
   });
 }
 
@@ -259,7 +259,7 @@ function activatePads(sequence) {
  * sequence.
  */
  function playComputerTurn() {
-  padContainer.classList.add("unclickable");
+  //padContainer.classList.add("unclickable");
   statusSpan.textContent = "The computer's turn...";
   heading.textContent = `Round ${roundCount} of ${maxRoundCount}`;
   computerSequence.push(getRandomItem(pads.map((pad) => pad.color)));
@@ -307,7 +307,7 @@ function checkPress(color) {
   let remainingPresses = computerSequence.length - playerSequence.length;
   statusSpan.textContent = `Player's turn:${remainingPresses} presses left`;
   if (computerSequence[index] != playerSequence[index]){
-    resetGame();
+    resetGame("Game Over, You chose the wrong color!");
     return;
   }
   if(remainingPresses === 0){
