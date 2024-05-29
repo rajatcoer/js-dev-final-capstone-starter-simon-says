@@ -333,7 +333,7 @@ function checkPress(color) {
 function checkRound() {
   // TODO: Write your code here.
   if (playerSequence.length === maxRoundCount){
-    resetGame("All Rounds finished. Well Played!!");
+    resetGame("Congratulations, you have won the game!!");
   }
   else {
     roundCount++;
